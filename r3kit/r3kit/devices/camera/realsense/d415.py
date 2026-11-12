@@ -12,7 +12,6 @@ import pyrealsense2 as rs
 from r3kit.devices.camera.base import CameraBase
 from r3kit.devices.camera.utils import inpaint
 from r3kit.devices.camera.realsense.config import D415_ID, D415_STREAMS
-from r3kit.utils.vis import draw_time, save_imgs, save_img
 
 
 class D415(CameraBase):
@@ -187,6 +186,8 @@ class D415(CameraBase):
         return streaming_data
     
     def save_streaming(self, save_path:str, streaming_data:dict) -> None:
+        from r3kit.utils.vis import draw_time, save_imgs
+
         has_writer = False
         for root, dirs, files in os.walk(f'./.temp/{self.name}'):
             if len(files) > 0:
@@ -232,6 +233,8 @@ class D415(CameraBase):
             save_imgs(os.path.join(save_path, 'depth'), streaming_data["depth"], suffix='png', idx_bias=idx_bias)
 
     def _write_streaming_data(self, save_path:str) -> None:
+        from r3kit.utils.vis import save_img
+
         os.makedirs(save_path, exist_ok=True)
         os.makedirs(os.path.join(save_path, 'color'), exist_ok=True)
         if self._depth:

@@ -419,7 +419,7 @@
       "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/realsense/d415.py",
       "path": "r3kit/r3kit/devices/camera/realsense/d415.py",
       "source_sha256": "7b942e72172c5638024d9868ba93ec6ce32f6d8ac8c2e6f0df2288de36055654",
-      "export_sha256": "7b942e72172c5638024d9868ba93ec6ce32f6d8ac8c2e6f0df2288de36055654"
+      "export_sha256": "386162df3ecfdbc233e77d89370c30a4f877673a69c389029c2f755ec52124b9"
     },
     {
       "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/realsense/d435.py",
@@ -783,9 +783,11 @@
     }
   ],
   "modified_source_files": [
-    "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/config/teleop_dual_params.yaml"
+    "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/config/teleop_dual_params.yaml",
+    "r3kit/r3kit/devices/camera/realsense/d415.py"
   ],
   "notes": [
-    "Original source directories unchanged; large artifacts and credentials omitted."
+    "Original source directories unchanged; large artifacts and credentials omitted.",
+    "Public onboarding update: portable setup and launch scripts, user-facing READMEs, and workspace device defaults."
   ]
 }

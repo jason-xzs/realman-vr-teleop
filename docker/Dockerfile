@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN python3 -m venv --system-site-packages /opt/teleop-venv
 ENV PATH="/opt/teleop-venv/bin:${PATH}"
 COPY requirements.txt /tmp/teleop-requirements.txt
+RUN pip install --no-cache-dir torch==2.7.1+cpu torchvision==0.22.1+cpu \
+    --index-url https://download.pytorch.org/whl/cpu
 RUN pip install --no-cache-dir -r /tmp/teleop-requirements.txt
 ENV PYTHONPATH="/opt/teleop-venv/lib/python3.12/site-packages:/workspace:/workspace/r3kit"
 ENV PYNPUT_BACKEND=dummy
