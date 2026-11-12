@@ -1,0 +1,791 @@
+{
+  "export_date": "2026-11-12",
+  "files": [
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/config/teleop_dual_params.yaml",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/config/teleop_dual_params.yaml",
+      "source_sha256": "9df71dd21d155409a785463f44e0c898471aa2674c242915eb371934f87f9406",
+      "export_sha256": "abd720d613b2a9e9e384f7d271a8354d89c16535afb1bce06b296d04a21a093a"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/config/teleop_params.yaml",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/config/teleop_params.yaml",
+      "source_sha256": "f289886d779934334fea6e96c7c72f93e74f8a998faf490df05af55e0740adb6",
+      "export_sha256": "f289886d779934334fea6e96c7c72f93e74f8a998faf490df05af55e0740adb6"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/launch/teleop_record.launch.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/launch/teleop_record.launch.py",
+      "source_sha256": "8d4a7d803d1a2bbb8d1ccfd86aad29c4a1f8bf74862154865cfb2a83b4e2ca89",
+      "export_sha256": "8d4a7d803d1a2bbb8d1ccfd86aad29c4a1f8bf74862154865cfb2a83b4e2ca89"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/launch/vr_dual_teleop.launch.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/launch/vr_dual_teleop.launch.py",
+      "source_sha256": "ed258dd6b957404aa523e3d5a85c0df0e30a629eccba89a9be8a03b7641652d5",
+      "export_sha256": "ed258dd6b957404aa523e3d5a85c0df0e30a629eccba89a9be8a03b7641652d5"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/launch/vr_teleop.launch.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/launch/vr_teleop.launch.py",
+      "source_sha256": "ff290645882407eac21419bb72e1d21b20e2ec031166e754c4296129be446eb4",
+      "export_sha256": "ff290645882407eac21419bb72e1d21b20e2ec031166e754c4296129be446eb4"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/package.xml",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/package.xml",
+      "source_sha256": "abab6b462059ea1c836c1e9047e29ffbdc0cad606e08ebce4e781c309e98743f",
+      "export_sha256": "abab6b462059ea1c836c1e9047e29ffbdc0cad606e08ebce4e781c309e98743f"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/__init__.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/camera_node.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/camera_node.py",
+      "source_sha256": "f25b07617f750f5a0aa1955331afd889622aed0dc66af5c2bb6fd4a919a06cb7",
+      "export_sha256": "f25b07617f750f5a0aa1955331afd889622aed0dc66af5c2bb6fd4a919a06cb7"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/dataset_recorder_node.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/dataset_recorder_node.py",
+      "source_sha256": "90d51e1cea02904f28c6dc1ef14dfc63cb3473510ffda8b8163fa61dd4bb406d",
+      "export_sha256": "90d51e1cea02904f28c6dc1ef14dfc63cb3473510ffda8b8163fa61dd4bb406d"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/diag_log.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/diag_log.py",
+      "source_sha256": "6d6079959dc785b5b8bb601e10d06a834f9cbe8e7bf664f0c9888c5cbd2fe418",
+      "export_sha256": "6d6079959dc785b5b8bb601e10d06a834f9cbe8e7bf664f0c9888c5cbd2fe418"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/encoder_node.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/encoder_node.py",
+      "source_sha256": "7730c1fa4cdf2e7cfba2f8ab8058601c0e6ddac5ef55d6ddbc9588dee8f37f97",
+      "export_sha256": "7730c1fa4cdf2e7cfba2f8ab8058601c0e6ddac5ef55d6ddbc9588dee8f37f97"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/hardware.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/hardware.py",
+      "source_sha256": "2f18509340f9782d68616dddb832534cbc96fc3eafecef6bca93a07271d72031",
+      "export_sha256": "2f18509340f9782d68616dddb832534cbc96fc3eafecef6bca93a07271d72031"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/realman_driver_node.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/realman_driver_node.py",
+      "source_sha256": "6a0e152588e1feab28bee8ca65ef2a21907b9ef199a5f2669e8ba18e5038fc53",
+      "export_sha256": "6a0e152588e1feab28bee8ca65ef2a21907b9ef199a5f2669e8ba18e5038fc53"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/teleop_node.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/teleop_node.py",
+      "source_sha256": "a73b9d98e7f4da521b2e4a4b52179f833d1435f2f87475348bbd1b4aa81bfaeb",
+      "export_sha256": "a73b9d98e7f4da521b2e4a4b52179f833d1435f2f87475348bbd1b4aa81bfaeb"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/utils.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/utils.py",
+      "source_sha256": "e6fdaac638f6cfa630dc562ec03165e2198e97e977a9a3e466b377b1bf4e9010",
+      "export_sha256": "e6fdaac638f6cfa630dc562ec03165e2198e97e977a9a3e466b377b1bf4e9010"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_bridge/__init__.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_bridge/__init__.py",
+      "source_sha256": "03d488bcb498266ff123f05a4bd167068ed0b1e11a7f7c6bffb212446756639d",
+      "export_sha256": "03d488bcb498266ff123f05a4bd167068ed0b1e11a7f7c6bffb212446756639d"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_bridge/adb_monitor.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_bridge/adb_monitor.py",
+      "source_sha256": "76c6859a05ff30d73cc51a474f026c92c0655d057e33e460059559b95c9e8a50",
+      "export_sha256": "76c6859a05ff30d73cc51a474f026c92c0655d057e33e460059559b95c9e8a50"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_bridge/binary_parser.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_bridge/binary_parser.py",
+      "source_sha256": "69b6b36d59dd26e84fb3d848f4a40835116efd7fce37bdb53c126221dc374aed",
+      "export_sha256": "69b6b36d59dd26e84fb3d848f4a40835116efd7fce37bdb53c126221dc374aed"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_bridge/vr_data_manager.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_bridge/vr_data_manager.py",
+      "source_sha256": "b7ac2e7eeb22f82e10ee39906ef2d9b5399dc1ba3d5fadccd99408210ae51167",
+      "export_sha256": "b7ac2e7eeb22f82e10ee39906ef2d9b5399dc1ba3d5fadccd99408210ae51167"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_input_node.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_input_node.py",
+      "source_sha256": "e83c196f19b45d6d412595b7a3d6638579c4d7d747ed31ced3fd0d902fad1a6d",
+      "export_sha256": "e83c196f19b45d6d412595b7a3d6638579c4d7d747ed31ced3fd0d902fad1a6d"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_teleop_node.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_teleop_node.py",
+      "source_sha256": "61c4f56694ab8ae8d605376eccb553c8186eaf87b487aa2d23b87c4d4706594a",
+      "export_sha256": "61c4f56694ab8ae8d605376eccb553c8186eaf87b487aa2d23b87c4d4706594a"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_utils.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/realman_teleop/vr_utils.py",
+      "source_sha256": "ef54f3acb51036afd600ba09b229b504decf3f8e38455494bab7179db9685e0e",
+      "export_sha256": "ef54f3acb51036afd600ba09b229b504decf3f8e38455494bab7179db9685e0e"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/resource/realman_teleop",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/resource/realman_teleop",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/scripts/switch_rotation_preset.sh",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/scripts/switch_rotation_preset.sh",
+      "source_sha256": "ad20fa7e0428ded4cff7fde665cc45f9a64b12437e2125812d3ed1eb91d66d0d",
+      "export_sha256": "ad20fa7e0428ded4cff7fde665cc45f9a64b12437e2125812d3ed1eb91d66d0d"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/setup.cfg",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/setup.cfg",
+      "source_sha256": "44c531687e6f2797eac3c42afa77c88f402a01ad9066ae6decf90eeffc302506",
+      "export_sha256": "44c531687e6f2797eac3c42afa77c88f402a01ad9066ae6decf90eeffc302506"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/setup.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/setup.py",
+      "source_sha256": "c6f50a0be5bc30efa37b8a6e838c3127bbca01ff3e3d20ee065be9bcdae95c59",
+      "export_sha256": "c6f50a0be5bc30efa37b8a6e838c3127bbca01ff3e3d20ee065be9bcdae95c59"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/tests/__init__.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/tests/__init__.py",
+      "source_sha256": "c718dffb7d189bba41337d15a52e08d5665536fd86febeb07c6fa647dd404cf1",
+      "export_sha256": "c718dffb7d189bba41337d15a52e08d5665536fd86febeb07c6fa647dd404cf1"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/tests/test_pose_to_joints_ik.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/tests/test_pose_to_joints_ik.py",
+      "source_sha256": "6312941cd87807faa22adcaf5ce0d47c9892f9b47b385548a55d0197e40ef8e3",
+      "export_sha256": "6312941cd87807faa22adcaf5ce0d47c9892f9b47b385548a55d0197e40ef8e3"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/web_ui/__init__.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/web_ui/__init__.py",
+      "source_sha256": "4805d5368f2013e2067d03ecafc61cfac6d8299a7dc391de2d03f969d8224184",
+      "export_sha256": "4805d5368f2013e2067d03ecafc61cfac6d8299a7dc391de2d03f969d8224184"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/web_ui/control_panel.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/web_ui/control_panel.py",
+      "source_sha256": "cc87802d48a3b138f4f807af7299846c40dfdd3622aeb32993e67a19481965ad",
+      "export_sha256": "cc87802d48a3b138f4f807af7299846c40dfdd3622aeb32993e67a19481965ad"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/web_ui/templates/index.html",
+      "path": "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/web_ui/templates/index.html",
+      "source_sha256": "a9c61d8b6af09ea92983b82a94549f58635cc1bc87c4ee44ef9e1776489fa247",
+      "export_sha256": "a9c61d8b6af09ea92983b82a94549f58635cc1bc87c4ee44ef9e1776489fa247"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/Robotic_Arm/__init__.py",
+      "path": "Robotic_Arm/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/Robotic_Arm/libs/linux_arm/libapi_c.so",
+      "path": "Robotic_Arm/libs/linux_arm/libapi_c.so",
+      "source_sha256": "5b9d236a5cf901cdf05418d9ef5815a77a8c717af0ff037e7aad9247beb76fb9",
+      "export_sha256": "5b9d236a5cf901cdf05418d9ef5815a77a8c717af0ff037e7aad9247beb76fb9"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/Robotic_Arm/libs/linux_x86/libapi_c.so",
+      "path": "Robotic_Arm/libs/linux_x86/libapi_c.so",
+      "source_sha256": "6a5d96ff8144d04a5058e77ef37bf7da72904e4a336921eb1917c72a3772a036",
+      "export_sha256": "6a5d96ff8144d04a5058e77ef37bf7da72904e4a336921eb1917c72a3772a036"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/Robotic_Arm/libs/win_32/api_c.dll",
+      "path": "Robotic_Arm/libs/win_32/api_c.dll",
+      "source_sha256": "3549051ebecdd0886f75dde42ca1e99d3fc1225c7550312af763bedab4571ab1",
+      "export_sha256": "3549051ebecdd0886f75dde42ca1e99d3fc1225c7550312af763bedab4571ab1"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/Robotic_Arm/libs/win_64/api_c.dll",
+      "path": "Robotic_Arm/libs/win_64/api_c.dll",
+      "source_sha256": "c0c33d16aef9f8a07711c78adf2f664258061a77ec909ecd56a340dd4a97cae7",
+      "export_sha256": "c0c33d16aef9f8a07711c78adf2f664258061a77ec909ecd56a340dd4a97cae7"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/Robotic_Arm/rm_ctypes_wrap.py",
+      "path": "Robotic_Arm/rm_ctypes_wrap.py",
+      "source_sha256": "6d31db234d0f390ec2106d088765245f0705d17c8bfd756e51ff48f69e193ac6",
+      "export_sha256": "6d31db234d0f390ec2106d088765245f0705d17c8bfd756e51ff48f69e193ac6"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/Robotic_Arm/rm_robot_interface.py",
+      "path": "Robotic_Arm/rm_robot_interface.py",
+      "source_sha256": "3fffdcbc4448b24d8dd9ad0a415988f892ed4daa7e5d5c78b39830b06ba13420",
+      "export_sha256": "3fffdcbc4448b24d8dd9ad0a415988f892ed4daa7e5d5c78b39830b06ba13420"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/.gitignore",
+      "path": "r3kit/.gitignore",
+      "source_sha256": "6bc4ee51ff94ae03088fcd055266c6234cc01a0a889aed801d6afa3e89f79b15",
+      "export_sha256": "6bc4ee51ff94ae03088fcd055266c6234cc01a0a889aed801d6afa3e89f79b15"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/MANIFEST.in",
+      "path": "r3kit/MANIFEST.in",
+      "source_sha256": "f160199b2f0fde5326e420ffe052eb365f4b4b1fe18c9c273a1b49650afa9bb7",
+      "export_sha256": "f160199b2f0fde5326e420ffe052eb365f4b4b1fe18c9c273a1b49650afa9bb7"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/README.md",
+      "path": "r3kit/README.md",
+      "source_sha256": "660ee279c097eba8e171eef7819c805f52cd76cf348aa90f85cc19a4a3e011ba",
+      "export_sha256": "660ee279c097eba8e171eef7819c805f52cd76cf348aa90f85cc19a4a3e011ba"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/docs/algo_calib_tcp.md",
+      "path": "r3kit/docs/algo_calib_tcp.md",
+      "source_sha256": "4e8023e150924f345c604cf896c37e6f55706bad2dc659a91a50cda42c25de0e",
+      "export_sha256": "4e8023e150924f345c604cf896c37e6f55706bad2dc659a91a50cda42c25de0e"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/docs/algo_tare_linear.md",
+      "path": "r3kit/docs/algo_tare_linear.md",
+      "source_sha256": "821cd84fee66ced3cafd32e855ebf380282032635fcebb4e823730055ab84692",
+      "export_sha256": "821cd84fee66ced3cafd32e855ebf380282032635fcebb4e823730055ab84692"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/docs/device_camera_realsense.md",
+      "path": "r3kit/docs/device_camera_realsense.md",
+      "source_sha256": "a36bf4169e3af9ee5b9e5b164d79a46f4c22a40cd5a1a9883039095b5f4120e2",
+      "export_sha256": "a36bf4169e3af9ee5b9e5b164d79a46f4c22a40cd5a1a9883039095b5f4120e2"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/docs/device_camera_vive_ultimate.md",
+      "path": "r3kit/docs/device_camera_vive_ultimate.md",
+      "source_sha256": "572a6476b8cd24db7505cda9959f4982104cdab90bd3284afed117a92ebf2313",
+      "export_sha256": "572a6476b8cd24db7505cda9959f4982104cdab90bd3284afed117a92ebf2313"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/docs/device_encoder_pdcd_angle.md",
+      "path": "r3kit/docs/device_encoder_pdcd_angle.md",
+      "source_sha256": "7b0fcad718d13ca19a006b44bb0232d7c448ed48b0072ba32bf913f54675f97e",
+      "export_sha256": "7b0fcad718d13ca19a006b44bb0232d7c448ed48b0072ba32bf913f54675f97e"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/docs/device_ftsensor_flexiv_pyft.md",
+      "path": "r3kit/docs/device_ftsensor_flexiv_pyft.md",
+      "source_sha256": "adfccd94224e0c6a76fc3f0cd45ca0bfc342ebcd612fe93fe2c03a155827ffcb",
+      "export_sha256": "adfccd94224e0c6a76fc3f0cd45ca0bfc342ebcd612fe93fe2c03a155827ffcb"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/docs/device_ftsensor_robotiq_ft300.md",
+      "path": "r3kit/docs/device_ftsensor_robotiq_ft300.md",
+      "source_sha256": "5ac992d337fed48cc48a6bcaa1490e2adfebd43615340c5fadd737449a0df46e",
+      "export_sha256": "5ac992d337fed48cc48a6bcaa1490e2adfebd43615340c5fadd737449a0df46e"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/docs/device_robot_flexiv.md",
+      "path": "r3kit/docs/device_robot_flexiv.md",
+      "source_sha256": "ae905791d0ef5ef70778d3b9d4ad585ca3bb19e7f443da20c747d9bfdd3741f9",
+      "export_sha256": "ae905791d0ef5ef70778d3b9d4ad585ca3bb19e7f443da20c747d9bfdd3741f9"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/docs/device_robot_franka_panda.md",
+      "path": "r3kit/docs/device_robot_franka_panda.md",
+      "source_sha256": "c81d083a01983dfe85b192ff72998218b4b3d2bde59a9b68bde03aa07a4cd306",
+      "export_sha256": "c81d083a01983dfe85b192ff72998218b4b3d2bde59a9b68bde03aa07a4cd306"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/__init__.py",
+      "path": "r3kit/r3kit/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/__init__.py",
+      "path": "r3kit/r3kit/algos/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/calib/__init__.py",
+      "path": "r3kit/r3kit/algos/calib/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/calib/arucoext.py",
+      "path": "r3kit/r3kit/algos/calib/arucoext.py",
+      "source_sha256": "fa8a4319aba7f5310aadeef359ad1f572716227f9f30c2f1be9cb57998cd52fb",
+      "export_sha256": "fa8a4319aba7f5310aadeef359ad1f572716227f9f30c2f1be9cb57998cd52fb"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/calib/chessboard.py",
+      "path": "r3kit/r3kit/algos/calib/chessboard.py",
+      "source_sha256": "5a8132dc1923acf75f22ae7da798f0996ff090ce675d485dd42ee486b97a10c6",
+      "export_sha256": "5a8132dc1923acf75f22ae7da798f0996ff090ce675d485dd42ee486b97a10c6"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/calib/config.py",
+      "path": "r3kit/r3kit/algos/calib/config.py",
+      "source_sha256": "e97a70644611b71ca5731c69db70e03070c50e33882fdb52a26d7583fd08c3be",
+      "export_sha256": "e97a70644611b71ca5731c69db70e03070c50e33882fdb52a26d7583fd08c3be"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/calib/handeye.py",
+      "path": "r3kit/r3kit/algos/calib/handeye.py",
+      "source_sha256": "300b0784fcaa8b53510757286f6fa12c912b38b5410a50bbd0fa735114ac1f44",
+      "export_sha256": "300b0784fcaa8b53510757286f6fa12c912b38b5410a50bbd0fa735114ac1f44"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/calib/tcp.py",
+      "path": "r3kit/r3kit/algos/calib/tcp.py",
+      "source_sha256": "679d19a670a5ae2c72bf8b74333b2f2e311f9e4a532a3d1b78a849ce0023852b",
+      "export_sha256": "679d19a670a5ae2c72bf8b74333b2f2e311f9e4a532a3d1b78a849ce0023852b"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/calib/utils.py",
+      "path": "r3kit/r3kit/algos/calib/utils.py",
+      "source_sha256": "7648a8c87590fad241bbf24996c2b2a0268d7b1d9d2e5eedb97f46d85afdc75c",
+      "export_sha256": "7648a8c87590fad241bbf24996c2b2a0268d7b1d9d2e5eedb97f46d85afdc75c"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/lstsq.py",
+      "path": "r3kit/r3kit/algos/lstsq.py",
+      "source_sha256": "3787b3263e6629b811b15670dce533410ac3703c0e66dbf642d2f9d6672bd349",
+      "export_sha256": "3787b3263e6629b811b15670dce533410ac3703c0e66dbf642d2f9d6672bd349"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/tare/__init__.py",
+      "path": "r3kit/r3kit/algos/tare/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/algos/tare/linear.py",
+      "path": "r3kit/r3kit/algos/tare/linear.py",
+      "source_sha256": "9f874e0ed196a17d70ed4b14be4180adf9b26c40724a5a8c12b72b1df403a9f4",
+      "export_sha256": "9f874e0ed196a17d70ed4b14be4180adf9b26c40724a5a8c12b72b1df403a9f4"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/__init__.py",
+      "path": "r3kit/r3kit/devices/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/base.py",
+      "path": "r3kit/r3kit/devices/base.py",
+      "source_sha256": "7c62273778c2cce868aa034f29abc6ac67e28ad4be95bff6b6535c40c51816b1",
+      "export_sha256": "7c62273778c2cce868aa034f29abc6ac67e28ad4be95bff6b6535c40c51816b1"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/__init__.py",
+      "path": "r3kit/r3kit/devices/camera/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/base.py",
+      "path": "r3kit/r3kit/devices/camera/base.py",
+      "source_sha256": "dba9a71ffb57854fec1ae7a8a38a56d72243d1851c909b4775cee92a965dfb4f",
+      "export_sha256": "dba9a71ffb57854fec1ae7a8a38a56d72243d1851c909b4775cee92a965dfb4f"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/realsense/__init__.py",
+      "path": "r3kit/r3kit/devices/camera/realsense/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/realsense/config.py",
+      "path": "r3kit/r3kit/devices/camera/realsense/config.py",
+      "source_sha256": "481a2e9bfe6e2e49c8bedd371d5077fa81914305a6e4b16828e3f2e624a633e9",
+      "export_sha256": "481a2e9bfe6e2e49c8bedd371d5077fa81914305a6e4b16828e3f2e624a633e9"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/realsense/d405.py",
+      "path": "r3kit/r3kit/devices/camera/realsense/d405.py",
+      "source_sha256": "c70b1f58125fa5e51b3659a1581685b8c9344f574c92ee6ad301c7e3eee06b69",
+      "export_sha256": "c70b1f58125fa5e51b3659a1581685b8c9344f574c92ee6ad301c7e3eee06b69"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/realsense/d415.py",
+      "path": "r3kit/r3kit/devices/camera/realsense/d415.py",
+      "source_sha256": "7b942e72172c5638024d9868ba93ec6ce32f6d8ac8c2e6f0df2288de36055654",
+      "export_sha256": "7b942e72172c5638024d9868ba93ec6ce32f6d8ac8c2e6f0df2288de36055654"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/realsense/d435.py",
+      "path": "r3kit/r3kit/devices/camera/realsense/d435.py",
+      "source_sha256": "27d1af46e3bf2b9d36d4f354ccc3df2af2330fa59dccb3cbfc9902b46fa2e3d3",
+      "export_sha256": "27d1af46e3bf2b9d36d4f354ccc3df2af2330fa59dccb3cbfc9902b46fa2e3d3"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/realsense/l515.py",
+      "path": "r3kit/r3kit/devices/camera/realsense/l515.py",
+      "source_sha256": "442fc721f4c5ebccb02c7a7bb701745fbf25254fe2f7fcd748f022f97bcc2f16",
+      "export_sha256": "442fc721f4c5ebccb02c7a7bb701745fbf25254fe2f7fcd748f022f97bcc2f16"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/realsense/t265.py",
+      "path": "r3kit/r3kit/devices/camera/realsense/t265.py",
+      "source_sha256": "0e631c261ae456e490478c2afc9ff2bfe66ac288e6c6fc446bcda21097bdddd5",
+      "export_sha256": "0e631c261ae456e490478c2afc9ff2bfe66ac288e6c6fc446bcda21097bdddd5"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/utils.py",
+      "path": "r3kit/r3kit/devices/camera/utils.py",
+      "source_sha256": "835db4fafafad51371f1941706e69ae1e9097c4e8a219b6bb41140b430b7a590",
+      "export_sha256": "835db4fafafad51371f1941706e69ae1e9097c4e8a219b6bb41140b430b7a590"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/vive/__init__.py",
+      "path": "r3kit/r3kit/devices/camera/vive/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/vive/config.py",
+      "path": "r3kit/r3kit/devices/camera/vive/config.py",
+      "source_sha256": "ff5e978e2fd1b4d0de98d11040a4a273d70e433aca14c7548fd85d170157876d",
+      "export_sha256": "ff5e978e2fd1b4d0de98d11040a4a273d70e433aca14c7548fd85d170157876d"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/vive/context_object.py",
+      "path": "r3kit/r3kit/devices/camera/vive/context_object.py",
+      "source_sha256": "aa7a7db6ebc324b1e088084f6402f02ef9dc5491910588a20e7bc0d5c91d35b8",
+      "export_sha256": "aa7a7db6ebc324b1e088084f6402f02ef9dc5491910588a20e7bc0d5c91d35b8"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/camera/vive/ultimate.py",
+      "path": "r3kit/r3kit/devices/camera/vive/ultimate.py",
+      "source_sha256": "c9daaa42dc4019d338018bf9d2869df467008b49707c3c4472fa3100e4be340a",
+      "export_sha256": "c9daaa42dc4019d338018bf9d2869df467008b49707c3c4472fa3100e4be340a"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/encoder/__init__.py",
+      "path": "r3kit/r3kit/devices/encoder/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/encoder/base.py",
+      "path": "r3kit/r3kit/devices/encoder/base.py",
+      "source_sha256": "560ca2296d4b8c1806bc7337f6faf4bd0cb7d89951927784319d383231937e30",
+      "export_sha256": "560ca2296d4b8c1806bc7337f6faf4bd0cb7d89951927784319d383231937e30"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/encoder/pdcd/__init__.py",
+      "path": "r3kit/r3kit/devices/encoder/pdcd/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/encoder/pdcd/angler.py",
+      "path": "r3kit/r3kit/devices/encoder/pdcd/angler.py",
+      "source_sha256": "935de49229e54fbcd0f114e4b21e9d0f2da26d4b6d4aa432b66da70e0aa33793",
+      "export_sha256": "935de49229e54fbcd0f114e4b21e9d0f2da26d4b6d4aa432b66da70e0aa33793"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/encoder/pdcd/config.py",
+      "path": "r3kit/r3kit/devices/encoder/pdcd/config.py",
+      "source_sha256": "2fa33682e5ff61034b569073ceee36aba3d98ba1ebda2486543c6937dc35e0e6",
+      "export_sha256": "2fa33682e5ff61034b569073ceee36aba3d98ba1ebda2486543c6937dc35e0e6"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/__init__.py",
+      "path": "r3kit/r3kit/devices/ftsensor/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/ati/__init__.py",
+      "path": "r3kit/r3kit/devices/ftsensor/ati/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/ati/config.py",
+      "path": "r3kit/r3kit/devices/ftsensor/ati/config.py",
+      "source_sha256": "2664fe731782d3b61d23e54bb8a6e70cb0ebe6a05f3b2e61d0ff14ed09db1d18",
+      "export_sha256": "2664fe731782d3b61d23e54bb8a6e70cb0ebe6a05f3b2e61d0ff14ed09db1d18"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/ati/pyati.py",
+      "path": "r3kit/r3kit/devices/ftsensor/ati/pyati.py",
+      "source_sha256": "a558eea91338aea0427f0965e4c8f3ceb3a8a734c02bca9145b633cb3258ce64",
+      "export_sha256": "a558eea91338aea0427f0965e4c8f3ceb3a8a734c02bca9145b633cb3258ce64"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/base.py",
+      "path": "r3kit/r3kit/devices/ftsensor/base.py",
+      "source_sha256": "2dea655134473dd588bbce30e2b40f47fba042c9a7b8c09e4cd2013c2e159228",
+      "export_sha256": "2dea655134473dd588bbce30e2b40f47fba042c9a7b8c09e4cd2013c2e159228"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/flexiv/__init__.py",
+      "path": "r3kit/r3kit/devices/ftsensor/flexiv/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/flexiv/config.py",
+      "path": "r3kit/r3kit/devices/ftsensor/flexiv/config.py",
+      "source_sha256": "68123edbcce5cad28187d9752fa9caa84b6c1921f3ec6766bab2f772bc7020fe",
+      "export_sha256": "68123edbcce5cad28187d9752fa9caa84b6c1921f3ec6766bab2f772bc7020fe"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/flexiv/pyft.py",
+      "path": "r3kit/r3kit/devices/ftsensor/flexiv/pyft.py",
+      "source_sha256": "31f2d6e6bb9d8df44694ddf093e4924ab404644f0764dc3183ef5df07ed1a6da",
+      "export_sha256": "31f2d6e6bb9d8df44694ddf093e4924ab404644f0764dc3183ef5df07ed1a6da"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/robotiq/__init__.py",
+      "path": "r3kit/r3kit/devices/ftsensor/robotiq/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/robotiq/config.py",
+      "path": "r3kit/r3kit/devices/ftsensor/robotiq/config.py",
+      "source_sha256": "0a76ee350ae9fa8cf3fbe578f57f55c0ba73947db6a516eb9aff4f3492a71466",
+      "export_sha256": "0a76ee350ae9fa8cf3fbe578f57f55c0ba73947db6a516eb9aff4f3492a71466"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/ftsensor/robotiq/ft300.py",
+      "path": "r3kit/r3kit/devices/ftsensor/robotiq/ft300.py",
+      "source_sha256": "e741238d8c4b11ca70bd9e9d7058b86c21c77396f0360fda2501b06171ca45f1",
+      "export_sha256": "e741238d8c4b11ca70bd9e9d7058b86c21c77396f0360fda2501b06171ca45f1"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/gripper/__init__.py",
+      "path": "r3kit/r3kit/devices/gripper/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/gripper/base.py",
+      "path": "r3kit/r3kit/devices/gripper/base.py",
+      "source_sha256": "f2fd665ed442db9427894a6bd35a2f1287dd64ec2be52822e24b49a5c36019ee",
+      "export_sha256": "f2fd665ed442db9427894a6bd35a2f1287dd64ec2be52822e24b49a5c36019ee"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/gripper/franka/__init__.py",
+      "path": "r3kit/r3kit/devices/gripper/franka/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/gripper/franka/config.py",
+      "path": "r3kit/r3kit/devices/gripper/franka/config.py",
+      "source_sha256": "297cc1fa2d24efce8f12ec883689b61874233c84a3e6d6d5085e1cb2f91ae705",
+      "export_sha256": "297cc1fa2d24efce8f12ec883689b61874233c84a3e6d6d5085e1cb2f91ae705"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/gripper/franka/panda.py",
+      "path": "r3kit/r3kit/devices/gripper/franka/panda.py",
+      "source_sha256": "c7756f569f57b46d8b35fb7a809d38fb37edead034a72719a9a740aeb76c748a",
+      "export_sha256": "c7756f569f57b46d8b35fb7a809d38fb37edead034a72719a9a740aeb76c748a"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/robot/__init__.py",
+      "path": "r3kit/r3kit/devices/robot/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/robot/base.py",
+      "path": "r3kit/r3kit/devices/robot/base.py",
+      "source_sha256": "d79ff23b1e5ca67a2e314cd90dae93234020b16677855a1fd445152ea3e94b20",
+      "export_sha256": "d79ff23b1e5ca67a2e314cd90dae93234020b16677855a1fd445152ea3e94b20"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/robot/flexiv/__init__.py",
+      "path": "r3kit/r3kit/devices/robot/flexiv/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/robot/flexiv/config.py",
+      "path": "r3kit/r3kit/devices/robot/flexiv/config.py",
+      "source_sha256": "3333014d74b5ef2b1abfed7eefedd565101f88f9caa2520db9c60589ee0d64fa",
+      "export_sha256": "3333014d74b5ef2b1abfed7eefedd565101f88f9caa2520db9c60589ee0d64fa"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/robot/flexiv/rizon.py",
+      "path": "r3kit/r3kit/devices/robot/flexiv/rizon.py",
+      "source_sha256": "d74bf4d0dd4e849038f7e973c1646fe62a1ecaa8a68c9e0a5c7c3e9b5286b8e1",
+      "export_sha256": "d74bf4d0dd4e849038f7e973c1646fe62a1ecaa8a68c9e0a5c7c3e9b5286b8e1"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/robot/franka/__init__.py",
+      "path": "r3kit/r3kit/devices/robot/franka/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/robot/franka/config.py",
+      "path": "r3kit/r3kit/devices/robot/franka/config.py",
+      "source_sha256": "0849b051fc8c05448429e13a3ff837a8e458968300eada6cdefcb746cf4dc4ea",
+      "export_sha256": "0849b051fc8c05448429e13a3ff837a8e458968300eada6cdefcb746cf4dc4ea"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/devices/robot/franka/panda.py",
+      "path": "r3kit/r3kit/devices/robot/franka/panda.py",
+      "source_sha256": "b35ae0bb6ce9790410f975d9c8074680e2ccda6695fe961c36a05e3af54cbe70",
+      "export_sha256": "b35ae0bb6ce9790410f975d9c8074680e2ccda6695fe961c36a05e3af54cbe70"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/utils/__init__.py",
+      "path": "r3kit/r3kit/utils/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/utils/buffer.py",
+      "path": "r3kit/r3kit/utils/buffer.py",
+      "source_sha256": "5520166b0c6e096060305e5237445d163a1c8c54b7e634752b42228936964bcc",
+      "export_sha256": "5520166b0c6e096060305e5237445d163a1c8c54b7e634752b42228936964bcc"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/utils/color.py",
+      "path": "r3kit/r3kit/utils/color.py",
+      "source_sha256": "b584f3b4b98a0bc3cd9896989374ab8ab3e4c469c6e0e39ae69226eda5ed0b49",
+      "export_sha256": "b584f3b4b98a0bc3cd9896989374ab8ab3e4c469c6e0e39ae69226eda5ed0b49"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/utils/normalization.py",
+      "path": "r3kit/r3kit/utils/normalization.py",
+      "source_sha256": "5425ded52126d6f21984284b4b70aa5db1fda23220f292254b0ce3a9fecdc8e3",
+      "export_sha256": "5425ded52126d6f21984284b4b70aa5db1fda23220f292254b0ce3a9fecdc8e3"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/utils/pc.py",
+      "path": "r3kit/r3kit/utils/pc.py",
+      "source_sha256": "e06fb29190ce4008cdde7175bfe279ddf58bced362315640aa4d24ead89f7310",
+      "export_sha256": "e06fb29190ce4008cdde7175bfe279ddf58bced362315640aa4d24ead89f7310"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/utils/reset.py",
+      "path": "r3kit/r3kit/utils/reset.py",
+      "source_sha256": "b65bebbadae18da403475af47b536909efbad3b6e9517a4ea0809d1e51442981",
+      "export_sha256": "b65bebbadae18da403475af47b536909efbad3b6e9517a4ea0809d1e51442981"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/utils/sequence.py",
+      "path": "r3kit/r3kit/utils/sequence.py",
+      "source_sha256": "7817b41f2cbc275e0524b3d4c7b69515e59ef51fb26b7829b77eca1447c37063",
+      "export_sha256": "7817b41f2cbc275e0524b3d4c7b69515e59ef51fb26b7829b77eca1447c37063"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/utils/transformation.py",
+      "path": "r3kit/r3kit/utils/transformation.py",
+      "source_sha256": "7a5c85a1cc4bfb31285d2746b348088b2a41985da3e9778d9cc7680846f898eb",
+      "export_sha256": "7a5c85a1cc4bfb31285d2746b348088b2a41985da3e9778d9cc7680846f898eb"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/r3kit/utils/vis.py",
+      "path": "r3kit/r3kit/utils/vis.py",
+      "source_sha256": "e91c7ae24711aa33cb783fe288ecfeb7e7d0d95e5b94605ec5fe25dd640110bc",
+      "export_sha256": "e91c7ae24711aa33cb783fe288ecfeb7e7d0d95e5b94605ec5fe25dd640110bc"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/r3kit/setup.py",
+      "path": "r3kit/setup.py",
+      "source_sha256": "4f8f2729fcd350cafc719398ff0f3d39d98bb0a5b52d06f91e61e67344418975",
+      "export_sha256": "4f8f2729fcd350cafc719398ff0f3d39d98bb0a5b52d06f91e61e67344418975"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/docs/realman_real_robot_experiment.md",
+      "path": "docs/realman_real_robot_experiment.md",
+      "source_sha256": "24ab368676c0f038f366d4d5f1e6a408eab1b11e52709fef18a01802ef40f43e",
+      "export_sha256": "24ab368676c0f038f366d4d5f1e6a408eab1b11e52709fef18a01802ef40f43e"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/quick_start.sh",
+      "path": "scripts/original_quick_start.sh",
+      "source_sha256": "c5cca073ba4d2a874c3508a216e3beaf1553b0741c977d06963ee220edfcf8c0",
+      "export_sha256": "c5cca073ba4d2a874c3508a216e3beaf1553b0741c977d06963ee220edfcf8c0"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/README.md",
+      "path": "docs/original_single_arm_README.md",
+      "source_sha256": "fc799158ae2b3bb2c6ca97eac7a46d951c5f22deeda01a8b43ab620232ac4580",
+      "export_sha256": "fc799158ae2b3bb2c6ca97eac7a46d951c5f22deeda01a8b43ab620232ac4580"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/LICENSE",
+      "path": "LICENSE",
+      "source_sha256": "b3d3e0f00f18345c6bc4c8b3c1a08dc95bc0bccef6d273305ba3430e0faef271",
+      "export_sha256": "b3d3e0f00f18345c6bc4c8b3c1a08dc95bc0bccef6d273305ba3430e0faef271"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/replay_trajectory.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/replay_trajectory.py",
+      "source_sha256": "2d83a87e3a086ccba88c27792115ec81a1d20291e86eeb4e0643ae3229e0d062",
+      "export_sha256": "2d83a87e3a086ccba88c27792115ec81a1d20291e86eeb4e0643ae3229e0d062"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/set_gripper_range.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/set_gripper_range.py",
+      "source_sha256": "34ac578dcd54a42a02a580e4e43d6918d62f08adc781503047d84d92bdc82fdc",
+      "export_sha256": "34ac578dcd54a42a02a580e4e43d6918d62f08adc781503047d84d92bdc82fdc"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/ros2_realman_ws/diagnose_ik_arm_angle.py",
+      "path": "spacemouse_control_arm/ros2_realman_ws/diagnose_ik_arm_angle.py",
+      "source_sha256": "9b45956bdb1d7632e4c017644dca9386a91eb297ce7e6dcb2a472df80a86c751",
+      "export_sha256": "9b45956bdb1d7632e4c017644dca9386a91eb297ce7e6dcb2a472df80a86c751"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/scripts/episode_task_map.json",
+      "path": "tools/datasets/episode_task_map.json",
+      "source_sha256": "3e9c5f5fb6dfc99930f59b063b7aef53b321ec39ad31b63bc2960ff2881ca540",
+      "export_sha256": "3e9c5f5fb6dfc99930f59b063b7aef53b321ec39ad31b63bc2960ff2881ca540"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/scripts/merge_lerobot_datasets.py",
+      "path": "tools/datasets/merge_lerobot_datasets.py",
+      "source_sha256": "ef7b446501135d5f867f6fc833f878412cc4093544f941834e7733dd737b5ad3",
+      "export_sha256": "ef7b446501135d5f867f6fc833f878412cc4093544f941834e7733dd737b5ad3"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/scripts/random_sample_episodes.py",
+      "path": "tools/datasets/random_sample_episodes.py",
+      "source_sha256": "49aa1e5552612f27b50162b1840036baf8a8b708f30b390b2497f70af85b9b00",
+      "export_sha256": "49aa1e5552612f27b50162b1840036baf8a8b708f30b390b2497f70af85b9b00"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/scripts/strip_dagger.py",
+      "path": "tools/datasets/strip_dagger.py",
+      "source_sha256": "d0b84e1cba95822e6f668b1546ff76c3568de835753151838b6c4b87e2e8341e",
+      "export_sha256": "d0b84e1cba95822e6f668b1546ff76c3568de835753151838b6c4b87e2e8341e"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/scripts/strip_depth.py",
+      "path": "tools/datasets/strip_depth.py",
+      "source_sha256": "2e7b027682e1865cc3e38cf1d64a249ef1ee234f0f2af5fc10fdd3b9aefbbf42",
+      "export_sha256": "2e7b027682e1865cc3e38cf1d64a249ef1ee234f0f2af5fc10fdd3b9aefbbf42"
+    },
+    {
+      "source": "/home/robot2/realman_teleop_v2/spacemouse_control_arm/scripts/tasks.json",
+      "path": "tools/datasets/tasks.json",
+      "source_sha256": "12052a6cc718ad2fe3441e36f4b883710c2407921cdf3043fbbe63536d32dd13",
+      "export_sha256": "12052a6cc718ad2fe3441e36f4b883710c2407921cdf3043fbbe63536d32dd13"
+    }
+  ],
+  "modified_source_files": [
+    "spacemouse_control_arm/ros2_realman_ws/src/realman_teleop/config/teleop_dual_params.yaml"
+  ],
+  "notes": [
+    "Original source directories unchanged; large artifacts and credentials omitted."
+  ]
+}

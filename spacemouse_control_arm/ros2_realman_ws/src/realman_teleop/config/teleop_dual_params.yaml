@@ -1,0 +1,285 @@
+# 双臂 VR 遥操作采集配置。请把 left_wrist.serial 改成新增腕部相机序列号。
+{
+  "realman_driver_left": {
+    "ros__parameters": {
+      "port": 8080,
+      "follow": false,
+      "high_follow": false,
+      "canfd_traj_mode": 0,
+      "canfd_radio": 0,
+      "rm_plus_baud": 115200,
+      "dry_run": false,
+      "udp_cycle": 1,
+      "local_ip": "192.168.1.100",
+      "state_hz": 100.0,
+      "joint_names": [
+        "joint_1",
+        "joint_2",
+        "joint_3",
+        "joint_4",
+        "joint_5",
+        "joint_6",
+        "joint_7",
+        "gripper"
+      ],
+      "gripper_deadband": 20,
+      "home_joint_deg": [
+        -0.331,
+        -0.396,
+        -0.421,
+        43.952,
+        1.29,
+        116.49,
+        -27.627
+      ],
+      "home_joint_deg_org": [
+        -0.263,
+        -0.505,
+        -0.157,
+        43.953,
+        1.225,
+        121.751,
+        -0.187
+      ],
+      "hex_home_joint_deg": [
+        -0.532,
+        7.146,
+        1.087,
+        68.138,
+        -0.472,
+        104.475,
+        0.431
+      ],
+      "home_velocity": 40,
+      "pose_to_joints_via_ik": true,
+      "ip": "192.168.1.18",
+      "udp_port": 8090,
+      "action_topic": "/left/rm/action_joint_state",
+      "action_pose_topic": "/left/rm/action_pose",
+      "state_topic": "/left/rm/state_joint_state",
+      "frame_id": "left_rm_base",
+      "service_prefix": "/left/driver",
+      "status_topic": "/left/driver/status",
+      "gripper_lock_status_topic": "/left/driver/gripper_lock_status"
+    }
+  },
+  "realman_driver_right": {
+    "ros__parameters": {
+      "port": 8080,
+      "follow": false,
+      "high_follow": false,
+      "canfd_traj_mode": 0,
+      "canfd_radio": 0,
+      "rm_plus_baud": 115200,
+      "dry_run": false,
+      "udp_cycle": 1,
+      "local_ip": "192.168.1.101",
+      "state_hz": 100.0,
+      "joint_names": [
+        "joint_1",
+        "joint_2",
+        "joint_3",
+        "joint_4",
+        "joint_5",
+        "joint_6",
+        "joint_7",
+        "gripper"
+      ],
+      "gripper_deadband": 20,
+      "home_joint_deg": [
+        -0.263,
+        -0.505,
+        -0.157,
+        43.953,
+        1.225,
+        121.751,
+        -0.187
+      ],
+      "hex_home_joint_deg": [
+        -0.532,
+        7.146,
+        1.087,
+        68.138,
+        -0.472,
+        104.475,
+        0.431
+      ],
+      "home_velocity": 20,
+      "pose_to_joints_via_ik": true,
+      "ip": "192.168.1.19",
+      "udp_port": 8089,
+      "action_topic": "/right/rm/action_joint_state",
+      "action_pose_topic": "/right/rm/action_pose",
+      "state_topic": "/right/rm/state_joint_state",
+      "frame_id": "right_rm_base",
+      "service_prefix": "/right/driver",
+      "status_topic": "/right/driver/status",
+      "gripper_lock_status_topic": "/right/driver/gripper_lock_status"
+    }
+  },
+  "camera_node_left_wrist": {
+    "ros__parameters": {
+      "fps": 30.0,
+      "use_depth": false,
+      "convert_bgr_to_rgb": true,
+      "flush_frames": 0,
+      "name": "left_wrist",
+      "serial": "323622272614",
+      "frame_id": "left_wrist",
+      "rotate_deg": 180
+    }
+  },
+  "camera_node_right_wrist": {
+    "ros__parameters": {
+      "fps": 30.0,
+      "use_depth": false,
+      "convert_bgr_to_rgb": true,
+      "flush_frames": 0,
+      "name": "right_wrist",
+      "serial": "230422272673",
+      "frame_id": "right_wrist",
+      "rotate_deg": 180
+    }
+  },
+  "camera_node_high": {
+    "ros__parameters": {
+      "fps": 30.0,
+      "use_depth": false,
+      "convert_bgr_to_rgb": true,
+      "flush_frames": 0,
+      "name": "high",
+      "serial": "420122071413",
+      "frame_id": "high",
+      "rotate_deg": 0
+    }
+  },
+  "dataset_recorder_node": {
+    "ros__parameters": {
+      "repo_id": "local/realman_teleop_vr_bowls_0828_20",
+      "dataset_root": "./data",
+      "task": "dual arm teleoperation task",
+      "record_hz": 30.0,
+      "sync_max_dt": 0.05,
+      "sync_queue_size": 30,
+      "cam_sync_max_dt": 0.03,
+      "arm_names": [
+        "left",
+        "right"
+      ],
+      "state_topics": [
+        "/left/rm/state_joint_state",
+        "/right/rm/state_joint_state"
+      ],
+      "camera_names": [
+        "left_wrist",
+        "right_wrist",
+        "high"
+      ],
+      "color_topics": [
+        "/camera/left_wrist/color/image_raw",
+        "/camera/right_wrist/color/image_raw",
+        "/camera/high/color/image_raw"
+      ],
+      "depth_topics": [
+        "/camera/left_wrist/depth/image_raw",
+        "/camera/right_wrist/depth/image_raw",
+        "/camera/high/depth/image_raw"
+      ],
+      "depth_scales": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "use_depth": false,
+      "depth_vis": false,
+      "depth_vis_mode": "fixed",
+      "depth_vis_min": 0.0,
+      "depth_vis_max": 1.5,
+      "depth_vis_pct_low": 1.0,
+      "depth_vis_pct_high": 99.0,
+      "depth_vis_colormap": "turbo",
+      "depth_vis_use_meters": true,
+      "depth_max_m": 2.0,
+      "state_topic": "/right/rm/state_joint_state",
+      "dataset_ready_timeout": 30.0,
+      "mock_state_mode": "action",
+      "timestamp_tolerance_s": 0.08,
+      "image_writer_threads": 4,
+      "image_writer_processes": 4
+    }
+  },
+  "vr_input_node": {
+    "ros__parameters": {
+      "data_source": "adb",
+      "adb_device_id": "",
+      "adb_check_interval": 3.0,
+      "udp_binary_port": 12345,
+      "udp_json_port": 6666,
+      "publish_hz": 100.0,
+      "timeout": 1.0,
+      "side": "right",
+      "sides": [
+        "left",
+        "right"
+      ]
+    }
+  },
+  "vr_teleop_left": {
+    "ros__parameters": {
+      "port": 8080,
+      "control_hz": 100.0,
+      "trigger_threshold": 0.85,
+      "alpha_pos": 0.8,
+      "alpha_rot": 0.8,
+      "dry_run": false,
+      "rotation_preset": "perm_xyz_pnp",
+      "joint_names": [
+        "joint_1",
+        "joint_2",
+        "joint_3",
+        "joint_4",
+        "joint_5",
+        "joint_6",
+        "joint_7",
+        "gripper"
+      ],
+      "ip": "192.168.1.18",
+      "side": "left",
+      "state_topic": "/left/rm/state_joint_state",
+      "action_pose_topic": "/left/rm/action_pose",
+      "frame_id": "left_rm_base",
+      "service_prefix": "/left/vr",
+      "status_topic": "/left/vr/teleop_status",
+      "driver_service_prefix": "/left/driver"
+    }
+  },
+  "vr_teleop_right": {
+    "ros__parameters": {
+      "port": 8080,
+      "control_hz": 100.0,
+      "trigger_threshold": 0.85,
+      "alpha_pos": 0.8,
+      "alpha_rot": 0.8,
+      "dry_run": false,
+      "rotation_preset": "perm_xyz_pnn",
+      "joint_names": [
+        "joint_1",
+        "joint_2",
+        "joint_3",
+        "joint_4",
+        "joint_5",
+        "joint_6",
+        "joint_7",
+        "gripper"
+      ],
+      "ip": "192.168.1.19",
+      "side": "right",
+      "state_topic": "/right/rm/state_joint_state",
+      "action_pose_topic": "/right/rm/action_pose",
+      "frame_id": "right_rm_base",
+      "service_prefix": "/right/vr",
+      "status_topic": "/right/vr/teleop_status",
+      "driver_service_prefix": "/right/driver"
+    }
+  }
+}

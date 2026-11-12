@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数采控制面板</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { text-align: center; margin-bottom: 20px; font-size: 24px; }
+        
+        /* 两列布局 */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+        
+        .card { background: #16213e; border-radius: 12px; padding: 20px; }
+        .card h2 { font-size: 14px; color: #888; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .btn { width: 100%; padding: 15px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; margin-bottom: 10px; transition: all 0.2s; }
+        .btn:hover { transform: translateY(-2px); }
+        .btn:active { transform: translateY(0); }
+        .btn-primary { background: #e94560; color: white; }
+        .btn-success { background: #0f3460; color: white; }
+        .btn-danger { background: #533483; color: white; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .status-bar { text-align: center; padding: 10px; background: #0f3460; border-radius: 8px; font-size: 14px; margin-top: 20px; }
+        .row { display: flex; gap: 10px; }
+        .row .btn { flex: 1; }
+        
+        /* 节点状态卡片 */
+        .node-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .node-item { background: #0f3460; border-radius: 8px; padding: 12px; text-align: center; }
+        .node-name { font-size: 12px; color: #888; margin-bottom: 6px; }
+        .node-hz { font-size: 24px; font-weight: bold; }
+        .node-hz span { font-size: 12px; font-weight: normal; color: #888; }
+        .node-status { font-size: 10px; margin-top: 4px; }
+        .node-status.active { color: #4ade80; }
+        .node-status.inactive { color: #f87171; }
+        
+        /* 全宽卡片 */
+        .full-width { grid-column: 1 / -1; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 数采控制面板</h1>
+        
+        <div class="grid">
+            <!-- 左列：节点状态监控 -->
+            <div class="card">
+                <h2>📊 节点状态</h2>
+                <div class="node-grid">
+                    <div class="node-item">
+                        <div class="node-name">Encoder</div>
+                        <div class="node-hz" id="encoder-hz">--<span> Hz</span></div>
+                        <div class="node-status inactive" id="encoder-status">离线</div>
+                    </div>
+                    <div class="node-item">
+                        <div class="node-name">Teleop</div>
+                        <div class="node-hz" id="teleop-hz">--<span> Hz</span></div>
+                        <div class="node-status inactive" id="teleop-status">离线</div>
+                    </div>
+                    <div class="node-item">
+                        <div class="node-name">Driver</div>
+                        <div class="node-hz" id="driver-hz">--<span> Hz</span></div>
+                        <div class="node-status inactive" id="driver-status">离线</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右列：控制按钮 -->
+            <div class="card">
+                <h2>🎮 机械臂控制</h2>
+                <button class="btn btn-primary" onclick="callApi('/api/high_follow', this)">
+                    🔴 启用高跟随模式
+                </button>
+                <h2 style="margin-top: 15px;">📹 录制控制</h2>
+                <div class="row">
+                    <button class="btn btn-success" onclick="callApi('/api/recorder/start', this)">
+                        ▶️ 开始
+                    </button>
+                    <button class="btn btn-danger" onclick="callApi('/api/recorder/stop', this)">
+                        ⏹️ 停止
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar" id="status">就绪</div>
+    </div>
+    
+    <script>
+        // API 调用
+        async function callApi(url, btn) {
+            const status = document.getElementById('status');
+            btn.disabled = true;
+            status.textContent = '请求中...';
+            try {
+                const res = await fetch(url, { method: 'POST' });
+                const data = await res.json();
+                status.textContent = data.message;
+            } catch (e) {
+                status.textContent = '请求失败: ' + e.message;
+            }
+            btn.disabled = false;
+        }
+        
+        // 节点状态轮询
+        async function updateStatus() {
+            try {
+                const res = await fetch('/api/status');
+                const data = await res.json();
+                
+                for (const [name, info] of Object.entries(data)) {
+                    const hzEl = document.getElementById(name + '-hz');
+                    const statusEl = document.getElementById(name + '-status');
+                    if (hzEl && statusEl) {
+                        hzEl.innerHTML = info.hz.toFixed(1) + '<span> Hz</span>';
+                        if (info.active) {
+                            statusEl.textContent = '在线';
+                            statusEl.className = 'node-status active';
+                        } else {
+                            statusEl.textContent = '离线';
+                            statusEl.className = 'node-status inactive';
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error('状态更新失败:', e);
+            }
+        }
+        
+        // 每 500ms 更新一次状态
+        setInterval(updateStatus, 500);
+        updateStatus();
+    </script>
+</body>
+</html>

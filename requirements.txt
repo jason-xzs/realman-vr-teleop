@@ -1,0 +1,9 @@
+# Recorder uses the LeRobot v2.1 API; v0.4+ has incompatible dataset APIs.
+lerobot==0.3.3
+numpy>=1.26,<2
+opencv-python-headless==4.10.0.84
+flask>=3,<4
+scipy>=1.11
+pyserial>=3.5
+pyrealsense2>=2.55
+PyYAML>=6

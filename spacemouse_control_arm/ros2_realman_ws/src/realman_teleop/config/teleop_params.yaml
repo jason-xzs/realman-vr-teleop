@@ -1,0 +1,212 @@
+# =============================================================================
+# 机械臂驱动配置
+# =============================================================================
+
+realman_driver_node:
+  ros__parameters:
+    # ===== 机械臂 TCP 连接参数 =====
+    ip: 192.168.1.18
+    port: 8080
+    
+    # ===== CANFD 透传参数 =====
+    # follow: 跟随模式，false=低跟随（更稳定），true=高跟随（要求周期≤10ms）
+    #         注意：如果 high_follow=true，此参数会被忽略（启动时强制低跟随）
+    follow: false
+    
+    # high_follow: 软启动高跟随模式（目前没有调试好，一直会让机械臂发抖）
+    #   - false: 不启用软启动，直接使用 follow 参数指定的模式
+    #   - true:  启用软启动，流程如下：
+    #            1. 启动时强制使用低跟随模式（安全）
+    #            2. 等待机械臂跟随到外骨骼初始姿态
+    #            3. 用户按回车确认后，切换到高跟随模式（低延迟）
+    high_follow: false
+    
+    # canfd_traj_mode: 轨迹模式，0=完全透传，1=曲线拟合，2=滤波模式
+    canfd_traj_mode: 0
+    # canfd_radio: 平滑系数（仅曲线拟合/滤波模式有效，traj_mode=0 时忽略）
+    canfd_radio: 0
+    
+    # ===== RM+ 协议（夹爪控制） =====
+    # rm_plus_baud: RM+ 串口波特率，>0 表示开启 RM+ 协议
+    rm_plus_baud: 115200
+    
+    # ===== 运行模式 =====
+    # dry_run: 仿真模式开关（同时影响 driver 和 recorder）
+    #   - true:  仿真模式，不连接真机，recorder 使用 action 代替 state
+    #   - false: 真机模式，连接机械臂，recorder 使用真实 state
+    dry_run: false
+    
+    # ===== UDP 状态上报配置 =====
+    # 机械臂通过 UDP 主动推送状态，不阻塞 TCP 控制指令
+    udp_port: 8089           # UDP 监听端口（睿尔曼默认 8089）
+    udp_cycle: 1             # 上报周期：1=5ms(200Hz), 2=10ms(100Hz)
+    local_ip: "192.168.1.100"  # 本机局域网 IP（自动检测可能获取到 VPN IP，需手动指定）
+    
+    # ===== ROS2 话题配置 =====
+    action_topic: /rm/action_joint_state
+    action_pose_topic: /rm/action_pose  # 笛卡尔位姿话题（VR 遥操作使用）
+    state_topic: /rm/state_joint_state
+    state_hz: 100.0          # 状态发布频率（Hz），与VR控制频率同步
+    frame_id: rm_base
+    joint_names: [joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, joint_7, gripper]
+    
+    # ===== 夹爪控制参数 =====
+    # gripper_deadband: 死区阈值，位置变化小于此值时不发送指令，避免频繁通信
+    # 与 async_client 的 GripperAsyncController(deadband=20) 保持一致
+    gripper_deadband: 20
+
+    # ===== Home 位姿配置 =====
+    # home_joint_deg: 机械臂 home 位姿（7自由度，单位：度），直接传给 SDK movej
+    # 默认 home 位置: 260125光学板中央视野
+    home_joint_deg: [-0.263, -0.505, -0.157, 43.953, 1.225, 121.751, -0.187]
+    # hex_home_joint_deg: hex 插入任务专属 home（hex_dagger.launch.py 用它覆盖 home_joint_deg）。
+    #   值 = hex 训练数据 realman_teleop_vr_0503_hex_merged_101_fixed 的 episode 起始关节位
+    #   （101 个 ep 起点 std=0 完全一致，rad→deg；2026-06-28 从数据反推标定）。
+    hex_home_joint_deg: [-0.532, 7.146, 1.087, 68.138, -0.472, 104.475, 0.431]
+    # home_velocity: 回 home 运动速度 (1-100)
+    home_velocity: 20
+
+# ===== 多相机配置 =====
+# 每个相机一个配置块，节点名格式: camera_node_<name>
+# rotate_deg: 图像旋转角度，支持 0, 90, 180, 270（用于相机安装方向不正的情况）
+camera_node_cam0:
+  ros__parameters:
+    name: cam0
+    serial: "230422272673"           # 相机序列号，D405（腕部相机）
+    fps: 30.0
+    use_depth: false   # 关闭深度流: policy 只用 RGB、录制也 use_depth=false → 深度纯浪费 CPU/USB (2026-06-28 为降卡顿关闭)
+    convert_bgr_to_rgb: true
+    flush_frames: 0
+    frame_id: cam0
+    rotate_deg: 180                  # 腕部相机装反了，旋转 180°
+
+# 示例：添加第二个相机，取消注释并填入序列号
+camera_node_cam1:
+  ros__parameters:
+    name: cam1
+    serial: "420122071413"         # 填入第二个相机的序列号 D435
+    fps: 30.0
+    use_depth: false   # 关闭深度流: policy 只用 RGB、录制也 use_depth=false → 深度纯浪费 CPU/USB (2026-06-28 为降卡顿关闭)
+    convert_bgr_to_rgb: true
+    flush_frames: 0
+    frame_id: cam1
+    rotate_deg: 0                  # 不旋转
+
+dataset_recorder_node:
+  ros__parameters:
+    repo_id: local/realman_teleop_vr_0510_double_obj-supp-50-4
+    dataset_root: /home/ubuntu/Desktop/Workspace/lerobot_policy_deploy/lerobotv3/vr_teleop/spacemouse_control_arm/ros2_realman_ws/data
+    task: place the green cylinder into the green circular plate, and place the red rectangular block into the square plate
+    record_hz: 30.0
+    sync_max_dt: 0.05
+    sync_queue_size: 30
+    cam_sync_max_dt: 0.03
+    # 单相机配置
+    # camera_names: [cam0]
+    # color_topics: [/camera/cam0/color/image_raw]
+    # depth_topics: [/camera/cam0/depth/image_raw]
+    # depth_scales: [0.001]
+    # 多相机配置（wrist+base）
+    camera_names: [cam0, cam1]
+    color_topics: [/camera/cam0/color/image_raw, /camera/cam1/color/image_raw]
+    depth_topics: [/camera/cam0/depth/image_raw, /camera/cam1/depth/image_raw]
+    depth_scales: [0.001, 0.001]
+
+    # use_depth: 是否录制depth原始数据（uint8格式，存储在parquet中）
+    use_depth: false
+
+    # depth_vis: 是否生成depth可视化视频（彩色MP4，占用存包时间约40%）
+    #   - true:  生成depth_vis视频，便于可视化查看，但存包时间较长
+    #   - false: 不生成depth_vis视频，存包速度提升约40%，depth原始数据仍保留
+    depth_vis: false
+    depth_vis_mode: fixed
+    depth_vis_min: 0.0
+    depth_vis_max: 1.5
+    depth_vis_pct_low: 1.0
+    depth_vis_pct_high: 99.0
+    depth_vis_colormap: turbo
+    depth_vis_use_meters: true
+    # 深度裁剪上限（米），超出部分按上限裁剪后量化为 uint8
+    depth_max_m: 2.0
+    # action_topic: /rm/action_joint_state  # 已废弃，VR 模式使用 action=state[t+1] 后处理生成
+    state_topic: /rm/state_joint_state
+    dataset_ready_timeout: 30.0
+    # mock_state: 由 launch 自动从 driver 的 dry_run 参数同步，无需手动设置
+    # 如果需要强制覆盖，可取消注释下面的行
+    # mock_state: true
+    mock_state_mode: action
+    # 时间戳容忍度，放宽相邻帧间隔校验，避免少量丢帧导致报错
+    timestamp_tolerance_s: 0.08
+    image_writer_threads: 4
+    image_writer_processes: 4    # 启用4进程并行编码
+
+# =============================================================================
+# VR 遥操作模块配置
+# =============================================================================
+
+# ===== VR 输入节点 =====
+# 接收 VR 控制器数据，支持三种数据源
+vr_input_node:
+  ros__parameters:
+    # 数据源选择: "adb" (USB) | "udp_binary" (WiFi) | "udp_json" (兼容)
+    # - adb: 推荐，通过 USB 连接，使用 adb logcat 读取 VR 设备日志
+    # - udp_binary: WiFi 连接，接收 UDP 12345 二进制数据
+    # - udp_json: 兼容模式，接收 UDP 6666 JSON 数据（需要 hmi-user-dev）
+    data_source: "adb"
+    
+    # ADB 模式配置 (data_source: "adb")
+    adb_device_id: ""           # ADB 设备 ID，空字符串=自动检测
+    adb_check_interval: 3.0     # 设备连接检查间隔 (秒)
+    
+    # UDP 二进制模式配置 (data_source: "udp_binary")
+    udp_binary_port: 12345      # WiFi 模式 UDP 端口
+    
+    # UDP JSON 模式配置 (data_source: "udp_json")
+    udp_json_port: 6666         # JSON 模式 UDP 端口（兼容 hmi-user-dev）
+    
+    # 通用配置
+    publish_hz: 100.0            # 发布频率 (Hz)
+    timeout: 1.0                # 超时判定 (秒)
+    side: "right"               # 使用右手柄
+
+# ===== VR 遥操作节点 =====
+# 将 VR 位姿转换为机械臂笛卡尔位姿，使用 movep_canfd 直接发送
+vr_teleop_node:
+  ros__parameters:
+    ip: 192.168.1.18            # 机械臂 IP（保留用于可能的 FK 计算）
+    port: 8080                  # 机械臂端口
+    control_hz: 100.0           # 控制频率 (Hz)
+    trigger_threshold: 0.85     # trigger 激活阈值 (0-1)
+    alpha_pos: 0.8              # 位置滤波系数 (越小越平滑)
+    alpha_rot: 0.8              # 旋转滤波系数 (越小越平滑)
+    side: "right"               # 使用右手柄
+    action_pose_topic: /rm/action_pose  # 笛卡尔位姿话题
+    state_topic: /rm/state_joint_state
+    # dry_run: 仿真模式，与 driver 保持一致
+    # - true: 不连接机械臂 SDK，不调用 driver 跟随服务
+    # - false: 启用 VR 控制时自动启用 driver 跟随
+    dry_run: false
+
+    # ===== 旋转映射方案（用于测试标定）=====
+    #
+    # 【perm_xyz 的 8 种正负号组合】（当前测试中）:
+    #   perm_xyz      - signs(+1,+1,+1): VR_X→X,  VR_Y→Y,  VR_Z→Z
+    #   perm_xyz_npp  - signs(-1,+1,+1): VR_X→-X, VR_Y→Y,  VR_Z→Z
+    #   perm_xyz_pnp  - signs(+1,-1,+1): VR_X→X,  VR_Y→-Y, VR_Z→Z
+    #   perm_xyz_ppn  - signs(+1,+1,-1): VR_X→X,  VR_Y→Y,  VR_Z→-Z
+    #   perm_xyz_nnp  - signs(-1,-1,+1): VR_X→-X, VR_Y→-Y, VR_Z→Z
+    #   perm_xyz_npn  - signs(-1,+1,-1): VR_X→-X, VR_Y→Y,  VR_Z→-Z
+    #   perm_xyz_pnn  - signs(+1,-1,-1): VR_X→X,  VR_Y→-Y, VR_Z→-Z
+    #   perm_xyz_nnn  - signs(-1,-1,-1): VR_X→-X, VR_Y→-Y, VR_Z→-Z
+    #
+    # 【其他基本轴排列】:
+    #   perm_xzy, perm_yxz, perm_yzx, perm_zxy, perm_zyx
+    #   以及各自的正负号变体 (perm_zxy_xxx, perm_yzx_xxx)
+    #
+    # 【旧方案（保留用于对比）】:
+    #   legacy_current, legacy_hmi
+    #
+    # 详见 vr_utils.py 中的 ROTATION_MAPPING_PRESETS
+    rotation_preset: "perm_xyz_pnn"
+
+# VR 状态显示已整合到控制面板 (http://localhost:5000)
